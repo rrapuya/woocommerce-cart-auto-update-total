@@ -3,7 +3,7 @@ add_action( 'woocommerce_check_cart_items', 'auto_update_cart_total' );
 function auto_update_cart_total() {
     // Only run in the Cart
     if( is_cart()) {
-    global $woocommerce, $product;
+    global $woocommerce;
 	 ?>
         <script>
             jQuery(function($){
