@@ -7,8 +7,7 @@ function auto_update_cart_total() {
 	 ?>
         <script>
             jQuery(function($){
-			   var 	current_cart_total = <?php echo $woocommerce->cart->cart_contents_total; ?>,
-                    currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
+			   var 	currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
 			   $('input[name*="qty"]').change(function(){
 					var quantity_number = $(this).val();
 					var prices = $(this).closest('.cart_item').find('.product-price').find('.amount').html().replace(/[^0-9\.]+/g,"");
